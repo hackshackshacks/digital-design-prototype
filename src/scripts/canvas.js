@@ -1,22 +1,43 @@
 const canvas = {
     element: document.querySelector(".canvas"),
-    drag: function () {
+    startX: 0,
+    startY: 0,
+    drag: function (event) {
 
+        if(this.startX > event.pageX) {
+            let draggedPixels = this.startX - event.pageX;
+
+
+        } else {
+            // console.log(this.startX  - event.pageX);
+        }
+
+        // this.element.style.top = this.element.style.top - event.clientY + "px";
+        // this.element.style.left = this.element.style.left - event.clientX + "px";
+
+        // console.log("drag", event.pageX, event.pageY)
     },
-    mouseDown: function() {
-        console.log('mousedown');
+    dragStart: function(event) {
+        this.startX = event.pageX;
+        this.startY = event.pageY;
+
+        console.log("start", this.startX, this.startY)
     },
-    mouseUp: function() {
-        console.log('mouseup');
+    dragEnd: function(event) {
+        console.log("start", this.startX, this.startY)
     },
     init: function () {
 
-        this.element.addEventListener("mousedown", (event) => {
-            this.mouseDown()
+        this.element.addEventListener("dragstart", (event) => {
+            this.dragStart(event)
         })
 
-        this.element.addEventListener("mouseup", (event) => {
-            this.mouseUp()
+        this.element.addEventListener("drag", (event) => {
+            this.drag(event)
+        })
+
+        this.element.addEventListener("dragend", (event) => {
+            this.dragEnd(event)
         })
 
         console.log(this.element)
