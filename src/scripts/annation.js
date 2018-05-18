@@ -21,6 +21,7 @@ const annotation = {
     })
 
     dot.querySelector('button').addEventListener('click', function () {
+      dot.querySelector('.amount').innerHTML = Number(dot.querySelector('.amount').innerHTML) + 1
       annotation.createNote(dot)
     })
   },
@@ -37,6 +38,7 @@ const annotation = {
   noteBox: function () {
     let text = 
     `
+    <div class="amount">1</div>
     <section class="noteBox">
       <article>
         <textarea></textarea>
