@@ -55,8 +55,14 @@
     z-index: 2;
     background-color: transparent;
     background-image: url("/images/trash.svg");
+    opacity: 0.8;
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
 
@@ -83,6 +89,7 @@
     background: $brand-primary;
     color: #fff;
     padding: 8px 0;
+    cursor: pointer;
 
     &:hover {
       background: darken($brand-primary, 5%);
