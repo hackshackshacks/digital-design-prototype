@@ -16,6 +16,8 @@ const annotation = {
 
     dot.insertAdjacentHTML('afterbegin', this.noteBox())
 
+    dot.querySelectorAll('textarea')[dot.querySelectorAll('textarea').length - 1].focus()
+
     dot.addEventListener('click', function (e) {
       annotation.openCloseDot(e)
     })
@@ -34,6 +36,8 @@ const annotation = {
     dot.querySelector('.add').addEventListener('click', function () {
       dot.querySelector('.amount').innerHTML = Number(dot.querySelector('.amount').innerHTML) + 1
       annotation.createNote(dot)
+
+      dot.querySelectorAll('textarea')[dot.querySelectorAll('textarea').length - 1].focus()
 
       dot.querySelector('.remove').addEventListener('click', function (e) {
         console.log(e.target.parentElement)
