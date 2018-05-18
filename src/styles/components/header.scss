@@ -1,0 +1,41 @@
+.header {
+  padding: 1rem 1.5625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $background-secondary;
+  border-bottom: $border-base;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  label {
+    position: relative;
+    margin-right: 1rem;
+    &:after {
+      $size: 1rem;
+      content: '';
+      position: absolute;
+      right: 0.7rem;
+      top: 50%;
+      transform: translatey(-50%);
+      height: $size;
+      width: $size;
+      background: url('../images/search.svg');
+    }
+  }
+  input {
+    padding: 0.8rem 1.3rem;
+    border: $border-base;
+    border-radius: $border-radius;
+    font-size: 1em;
+    font-family: $font-base;
+    width: 17.5rem;
+    &::placeholder {
+      color: $text-light;
+    }
+  }
+  img {
+    height: 3.4375rem;
+  }
+}
