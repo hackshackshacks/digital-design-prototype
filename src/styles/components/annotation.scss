@@ -1,10 +1,10 @@
 @keyframes pulse {
   from {
-    box-shadow: 0 0 0 0px rgba(#ff6e4e, 0.5);
+    box-shadow: 0 0 0 0px rgba($brand-primary, 0.5);
   }
 
   to {
-    box-shadow: 0 0 0 6px rgba(#ff6e4e, 0.5);
+    box-shadow: 0 0 0 6px rgba($brand-primary, 0.5);
   }
 }
 
@@ -12,7 +12,7 @@
   position: absolute;
   height: 24px;
   width: 24px;
-  border: .1em solid #ff6e4e;
+  border: .1em solid $brand-primary;
   border-radius: 50%;
   background: #303030;
   color: #fff;
@@ -42,6 +42,7 @@
 
   .textarea {
     position: relative;
+    width: 300px;
   }
 
   .remove {
@@ -63,7 +64,7 @@
     padding: 1rem;
     background: #F8EC93;
     font-size: 1rem;
-    width: 300px;
+    width: 100%;
     height: 200px;
     border: 0;
     display: block;
@@ -79,17 +80,17 @@
     font-size: 16px;
     font-weight: 600;
     box-shadow: 3px 5px 5px 0 rgba(0,0,0,0.1);
-    background: #ff6e4e;
+    background: $brand-primary;
     color: #fff;
     padding: 8px 0;
 
     &:hover {
-      background: darken(#ff6e4e, 5%);
+      background: darken($brand-primary, 5%);
     }
   }
 
   &.active {
-    background: #ff6e4e;
+    background: $brand-primary;
 
     .noteBox {
       display: flex;
