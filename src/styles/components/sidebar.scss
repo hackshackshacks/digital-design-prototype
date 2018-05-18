@@ -1,0 +1,53 @@
+.sidebar {
+  width: 25%;
+  background: white;
+  border-radius: $border-radius;
+  border: $border-base;
+  h2 {
+    text-transform: uppercase;
+    color: $text-medium;
+    font-size: 1em;
+    display: block;
+    padding: 1.875rem 0;
+    padding-bottom: 1rem;
+    margin: 0 1.875rem;
+    border-bottom: $border-base;
+  }
+  ul {
+    padding: 0.625rem 0;
+    li {
+      position: relative;
+      padding: 0 1.875rem;
+      a {
+        padding: 0.8rem 0 .8rem 2rem;
+        display: block;
+        color: $text-dark;
+        text-decoration: none;
+        font-size: 1.25em;
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 16px;
+        background: url('../images/folder.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 30%;
+      }
+      &:hover {
+        background: #fafafa;
+      }
+    }
+  }
+  .newCategory {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    
+  }
+}
