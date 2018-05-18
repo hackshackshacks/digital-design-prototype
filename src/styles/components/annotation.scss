@@ -1,0 +1,26 @@
+.dot {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border: .1em solid red;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    background: orange;
+  }
+
+  &.active {
+
+    background: red;
+    .noteBox {
+      display: flex;
+      position: absolute;
+      left: 36px;
+    }
+  }
+
+  .noteBox {
+    display: none;
+  }
+}
