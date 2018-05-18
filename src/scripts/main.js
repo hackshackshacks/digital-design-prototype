@@ -79,3 +79,16 @@ elements.hashtags.forEach(hashtag => {
     searchResults(hashtag.innerHTML)
   })
 })
+
+
+  const uploadButton = document.querySelector('.timeline button')
+  const dragDrop = document.querySelector('dialog')
+  const closeButton = document.querySelector('dialog .close')
+
+  uploadButton.addEventListener('click', ()=> {
+    dragDrop.classList.remove('hidden')
+  })
+
+  closeButton.addEventListener('click', ()=> {
+    dragDrop.classList.add('hidden')
+  })
