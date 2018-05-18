@@ -20,9 +20,26 @@ const annotation = {
       annotation.openCloseDot(e)
     })
 
-    dot.querySelector('button').addEventListener('click', function () {
+    dot.querySelector('.remove').addEventListener('click', function (e) {
+      console.log(e.target.parentElement)
+      e.target.parentElement.remove()
+      dot.querySelector('.amount').innerHTML = '0'
+
+      if (dot.querySelector('.amount').innerHTML == '0') {
+        dot.remove()
+      } 
+
+    })
+
+    dot.querySelector('.add').addEventListener('click', function () {
       dot.querySelector('.amount').innerHTML = Number(dot.querySelector('.amount').innerHTML) + 1
       annotation.createNote(dot)
+
+      dot.querySelector('.remove').addEventListener('click', function (e) {
+        console.log(e.target.parentElement)
+        e.target.parentElement.remove()
+        dot.querySelector('.amount').innerHTML = Number(dot.querySelector('.amount').innerHTML) - 1
+      })
     })
   },
   createNote: function (dot) {
