@@ -77,6 +77,36 @@
       height: $size;
       width: $size;
       background: url('../images/paperclip.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  article {
+    margin-top: 2.3125rem;
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px 0 rgba(#000000, 0.16);
+    header {
+      height: 21.875rem;
+    }
+    footer {
+      padding: 0.8125rem;
+      display: flex;
+      background: #fff;
+      align-content: center;
+      time {
+        color: $text-light;
+        font-size: 0.875em;
+      }
+      p {
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+      .hashtag {
+        color: $brand-primary;
+      }
+      img {
+        height: 3.4375rem;
+        margin-right: 1rem;
+      }
     }
   }
 }
