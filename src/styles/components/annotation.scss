@@ -1,12 +1,28 @@
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px rgba(#ff6e4e, 0.5);
+  }
+
+  to {
+    box-shadow: 0 0 0 6px rgba(#ff6e4e, 0.5);
+  }
+}
+
 .dot {
   position: absolute;
   height: 24px;
   width: 24px;
   border: .1em solid #ff6e4e;
   border-radius: 50%;
+  background: #303030;
   color: #fff;
   text-align: center;
   font-weight: 600;
+
+  animation-name: pulse;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 
   &:hover {
     cursor: pointer;
@@ -24,6 +40,25 @@
     overflow-y: auto;
   }
 
+  .textarea {
+    position: relative;
+  }
+
+  .remove {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+    background-color: transparent;
+    background-image: url("/images/trash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
   textarea {
     padding: 1rem;
     background: #F8EC93;
@@ -37,7 +72,7 @@
     margin-bottom: 1rem;
   }
 
-  button {
+  .add {
     width: 100%;
     border: 0;
     border-radius: 3px;
