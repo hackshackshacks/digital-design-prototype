@@ -20,33 +20,34 @@
     </ul>
     <button class="newCategory">New category</button>
   </nav>
-  <main>
+  <main class="timeline">
     <form action="#">
       <fieldset>
-        <legend>Upload</legend>
         <div class="inputGroup">
           <label for="description">Description</label>
-          <textarea id="description" cols="30" rows="10" placeholder="Type here..."></textarea>
+          <textarea id="description" cols="30" rows="2" placeholder="Type here..."></textarea>
         </div>
-        <div class="inputGroup">
-          <details>
-            <summary>
-              <label for="category">Category</label>
-            </summary>
-            <div class="categories">
-              <input type="checkbox" id="category1">
-              <label for="category1">Personal</label>
-              <input type="checkbox" id="category2">
-              <label for="category2">Presentation</label>
-              <input type="checkbox" id="category3">
-              <label for="category3">Random</label>
-              <input type="checkbox" id="category4">
-              <label for="category4">Fun</label>
-            </div>
-          </details>
+      </fieldset>
+      <fieldset class="footer">
+        <div>
+          <div class="inputGroup">
+            <details>
+              <summary>Select category</summary>
+              <div class="categories">
+                <input type="checkbox" id="category1">
+                <label for="category1">Personal</label>
+                <input type="checkbox" id="category2">
+                <label for="category2">Presentation</label>
+                <input type="checkbox" id="category3">
+                <label for="category3">Random</label>
+                <input type="checkbox" id="category4">
+                <label for="category4">Fun</label>
+              </div>
+            </details>
+          </div>
+          <button type="button">Attach file</button>
+          <button type="submit">Post</button>
         </div>
-        <button type="button">Attach file</button>
-        <button type="submit">Post</button>
       </fieldset>
     </form>
     <ol class="posts">

@@ -1,0 +1,82 @@
+.timeline {
+  width: 70%;
+  form {
+    background: $background-secondary;
+    padding: 1rem;
+    border-radius: $border-radius;
+    border: $border-base;
+  }
+  .footer > div {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+  }
+  label {
+    display: none;
+  }
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1.3rem;
+    border: $border-base;
+    border-radius: $border-radius;
+    font-size: 1.25em;
+    font-family: $font-base;
+    resize: none;
+    &::placeholder {
+      color: $text-light;
+    }
+  }
+  summary {
+    // margin-bottom: 1rem;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    label {
+      display: inline-block;
+      padding: 0.5em 1em;
+      border: $border-base;
+      border-radius: 100px;
+      font-weight: bold;
+      margin: 0.2rem;
+      font-size: 0.875rem;
+    }
+    input {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      &:checked + label {
+        border: $border-brand;
+        background: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+  button {
+    padding: 1.0625rem 1.8125rem;
+    position: relative;
+    border: $border-base;
+    border-radius: $border-radius;
+    font-size: 1em;
+    margin-right: 1.1rem;
+    &:nth-of-type(2) {
+      background: $brand-primary;
+      border: $border-brand;
+      color: white;
+      margin-right: 0;
+      &:before {
+        background: url('../images/paper-plane.svg');
+      }
+    }
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      $size: 1rem;
+      content: '';
+      margin-right: 0.5rem;
+      height: $size;
+      width: $size;
+      background: url('../images/paperclip.svg');
+    }
+  }
+}
