@@ -1,0 +1,70 @@
+<section class="feed">
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="#">All</a>
+      </li>
+      <li>
+        <a href="#">Personal</a>
+      </li>
+      <li>
+        <a href="#">Presentation</a>
+      </li>
+      <li>
+        <a href="#">Random</a>
+      </li>
+      <li>
+        <a href="#">Fun</a>
+      </li>
+    </ul>
+    <button class="newCategory"></button>
+  </nav>
+  <main>
+    <form action="#">
+      <fieldset>
+        <legend>Upload</legend>
+        <div class="inputGroup">
+          <label for="description">Description</label>
+          <textarea id="description" cols="30" rows="10" placeholder="Type here..."></textarea>
+        </div>
+        <div class="inputGroup">
+          <details>
+            <summary>
+              <label for="category">Category</label>
+            </summary>
+            <div class="categories">
+              <input type="checkbox" id="category1">
+              <label for="category1">Personal</label>
+              <input type="checkbox" id="category2">
+              <label for="category2">Presentation</label>
+              <input type="checkbox" id="category3">
+              <label for="category3">Random</label>
+              <input type="checkbox" id="category4">
+              <label for="category4">Fun</label>
+            </div>
+          </details>
+        </div>
+        <button type="button">Attach file</button>
+        <button type="submit">Post</button>
+      </fieldset>
+    </form>
+    <ol class="posts">
+      <li class="post">
+        <a href="#">
+          <article>
+            <header>
+              <img src="" alt="Post1 img">
+            </header>
+            <footer>
+              <img src="avatar.png" alt="avatar">
+              <time>
+                <span class="date">18-05-2018</span>
+                <span class="time">12:41</span>
+              </time>
+            </footer>
+          </article>
+        </a>
+      </li>
+    </ol>
+  </main>
+</section>
