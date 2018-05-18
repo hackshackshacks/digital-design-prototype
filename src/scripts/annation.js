@@ -41,7 +41,10 @@ const annotation = {
     <div class="amount">1</div>
     <section class="noteBox">
       <article>
-        <textarea></textarea>
+        <div class="textarea">
+          <textarea></textarea>
+          <button class="remove"></button>
+        </div>
         <button>add</button>
       </article>
     </section>
@@ -51,7 +54,10 @@ const annotation = {
   textArea: function () {
     let text = 
     `
-    <textarea></textarea>
+    <div class="textarea">
+      <textarea></textarea>
+      <button class="remove"></button>
+    </div>
     `
 
     return text
