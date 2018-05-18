@@ -13,6 +13,12 @@ const elements = {
 }
 
 function addCategories() {
+  while (elements.categories.firstChild) {
+    elements.categories.removeChild(elements.categories.firstChild)
+  }
+  while (elements.postCategories.firstChild) {
+    elements.postCategories.removeChild(elements.postCategories.firstChild)
+  }
   categories.forEach((category, i) => {
     elements.categories.insertAdjacentHTML(
       'beforeend',
@@ -49,6 +55,7 @@ elements.postForm.addEventListener('submit', e => {
 })
 elements.newCategory.addEventListener('click', () => {
   categories.push(elements.newCategoryInput.value)
+  addCategories()
 })
 elements.search.addEventListener('submit', e => {
   e.preventDefault()
