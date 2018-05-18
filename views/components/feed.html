@@ -2,23 +2,9 @@
   <nav class="sidebar">
     <h2>Categories</h2>
     <ul>
-      <li>
-        <a href="#">All</a>
-      </li>
-      <li>
-        <a href="#">Personal</a>
-      </li>
-      <li>
-        <a href="#">Presentation</a>
-      </li>
-      <li>
-        <a href="#">Random</a>
-      </li>
-      <li>
-        <a href="#">Fun</a>
-      </li>
     </ul>
-    <button class="newCategory">New category</button>
+    <input type="text" class="newCategoryInput" placeholder="New category">
+    <button class="newCategory">Add category</button>
   </nav>
   <main class="timeline">
     <form action="#">
@@ -34,14 +20,6 @@
             <details>
               <summary>Select category</summary>
               <div class="categories">
-                <input type="checkbox" id="category1">
-                <label for="category1">Personal</label>
-                <input type="checkbox" id="category2">
-                <label for="category2">Presentation</label>
-                <input type="checkbox" id="category3">
-                <label for="category3">Random</label>
-                <input type="checkbox" id="category4">
-                <label for="category4">Fun</label>
               </div>
             </details>
           </div>
@@ -53,32 +31,32 @@
     <div class="articles">
       <article>
         <header>
-          <img src="images/photo.jpg" alt="">
-        </header>
-        <footer>
-          <img src="images/avatar@2x.png" alt="">
-          <div class="content">
-            <time>18-05-2018 12:41</time>
-            <p>Hackathon is go!
-              <span class="hashtag">#hackathon</span>
-            </p>
-          </div>
-          <img src="icon-video.svg" alt="" class="icon">
-        </footer>
-      </article>
-      <article>
-        <header>
           <img src="images/photo2.png" alt="">
         </header>
         <footer>
           <img src="images/avatar@2x.png" alt="">
           <div class="content">
             <time>18-05-2018 12:41</time>
+            <p>Presentation
+              <span class="hashtag">#hackathon</span>
+            </p>
+          </div>
+          <img src="images/icon-photo.svg" alt="" class="icon">
+        </footer>
+      </article>
+      <article>
+        <header>
+          <img src="images/photo.jpg" alt="">
+        </header>
+        <footer>
+          <img src="images/avatar@2x.png" alt="">
+          <div class="content">
+            <time>18-05-2018 12:30</time>
             <p>Hackathon is go!
               <span class="hashtag">#hackathon</span>
             </p>
           </div>
-          <img src="icon-photo.svg" alt="" class="icon">
+          <img src="images/icon-video.svg" alt="" class="icon">
         </footer>
       </article>
       <article>
@@ -88,12 +66,13 @@
         <footer>
           <img src="images/avatar@2x.png" alt="">
           <div class="content">
-            <time>18-05-2018 12:41</time>
-            <p>Hackathon is go!
-              <span class="hashtag">#hackathon</span>
+            <time>18-05-2018 12:20</time>
+            <p>Note to self
+              <span class="hashtag">#self</span>
+              <span class="hashtag">#note</span>
             </p>
           </div>
-          <img src="icon-audio.svg" alt="" class="icon">
+          <img src="images/icon-audio.svg" alt="" class="icon">
         </footer>
       </article>
     </div>

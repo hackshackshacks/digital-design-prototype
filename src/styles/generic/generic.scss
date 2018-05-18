@@ -1,6 +1,10 @@
 body {
   font-family: $font-base;
   background: $background-primary;
+  user-select: none;
+}
+:focus {
+  outline: none;
 }
 h1 {
   text-transform: uppercase;

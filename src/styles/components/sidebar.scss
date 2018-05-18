@@ -12,14 +12,14 @@
     padding-bottom: 1rem;
     margin: 0 1.875rem;
     border-bottom: $border-base;
-  } 
+  }
   ul {
     padding: 0.625rem 0 0;
     li {
       position: relative;
       padding: 0 1.875rem;
       a {
-        padding: 0.8rem 0 .8rem 2rem;
+        padding: 0.8rem 0 0.8rem 2rem;
         display: block;
         color: $text-dark;
         text-decoration: none;
@@ -50,9 +50,10 @@
     box-shadow: none;
     font-size: 1.25em;
     color: $text-medium;
-    padding: 0.8rem 0 .8rem 2rem;
-    margin: 1rem 2rem;
+    padding: 0.8rem 0 0.8rem 2rem;
+    margin: 0 0 1rem 2rem;
     position: relative;
+    font-size: 1em;
     &:hover {
       color: $brand-primary;
       cursor: pointer;
@@ -69,5 +70,12 @@
       top: 42%;
       left: 0;
     }
+  }
+  .newCategoryInput {
+    width: calc(100% - 3.75rem);
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1.3rem;
+    margin-top: 2rem;
   }
 }
