@@ -1,0 +1,74 @@
+.upload {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  box-shadow: 0 0 0 999999vw rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em;
+  .close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    img {
+      width: 20px;
+      height: 20px;
+      transform: rotate(45deg);
+      opacity: .4;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 2px dashed #E4E4E4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  img {
+    width: 200px;
+  }
+  h3 {
+    font-size: 46px;
+    color: #5C5C5C;
+    display: block;
+    width: 250px;
+  }
+  button {
+    padding: 1.0625rem 1.8125rem;
+    position: relative;
+    border: $border-base;
+    border-radius: $border-radius;
+    font-size: 1em;
+    margin-right: 1.1rem;
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      $size: 1rem;
+      content: '';
+      margin-right: 0.5rem;
+      height: $size;
+      width: $size;
+      background: url('../images/paperclip.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  a {
+    margin-top: 3em;
+    transform: translatey(3em);
+    color: #A5A5A5;
+  }
+  &.hidden {
+    display: none;
+  }
+}
