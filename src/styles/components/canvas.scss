@@ -1,8 +1,5 @@
 main {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .canvas {
@@ -10,8 +7,4 @@ main {
     left: 0;
     top: 0;
     cursor: move;
-
-    img {
-        max-width: none;
-    }
 }
