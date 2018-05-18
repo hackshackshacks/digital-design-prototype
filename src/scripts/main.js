@@ -1,5 +1,6 @@
 const search = document.querySelector('header input')
 const resultsWrapper = document.querySelector('.results')
+let hashtags = document.querySelectorAll('.hashtag')
 
 search.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -17,3 +18,9 @@ function searchResults(input) {
   resultsWrapper.classList.remove('hidden')
   resultsWrapper.querySelector('h2').innerHTML = input
 }
+
+hashtags.forEach((hashtag)=> {
+  hashtag.addEventListener('click', ()=> {
+    searchResults(hashtag.innerHTML)
+  })
+})
