@@ -12,9 +12,9 @@
     padding-bottom: 1rem;
     margin: 0 1.875rem;
     border-bottom: $border-base;
-  }
+  } 
   ul {
-    padding: 0.625rem 0;
+    padding: 0.625rem 0 0;
     li {
       position: relative;
       padding: 0 1.875rem;
@@ -48,6 +48,26 @@
     background: transparent;
     border: none;
     box-shadow: none;
-    
+    font-size: 1.25em;
+    color: $text-medium;
+    padding: 0.8rem 0 .8rem 2rem;
+    margin: 1rem 2rem;
+    position: relative;
+    &:hover {
+      color: $brand-primary;
+      cursor: pointer;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url('../images/plus.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 42%;
+      left: 0;
+    }
   }
 }
