@@ -45,7 +45,7 @@ const annotation = {
           <textarea></textarea>
           <button class="remove"></button>
         </div>
-        <button>add</button>
+        <button class="add">add</button>
       </article>
     </section>
     `
