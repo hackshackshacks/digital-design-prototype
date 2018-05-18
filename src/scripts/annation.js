@@ -19,9 +19,13 @@ const annotation = {
     dot.addEventListener('click', function (e) {
       annotation.openCloseDot(e)
     })
-  },
-  createNote: function () {
 
+    dot.querySelector('button').addEventListener('click', function () {
+      annotation.createNote(dot)
+    })
+  },
+  createNote: function (dot) {
+    dot.querySelector('button').insertAdjacentHTML('beforebegin', annotation.textArea())
   },
   openCloseDot: function (e) {
     if (e.target.classList.contains('active')) {
@@ -41,6 +45,14 @@ const annotation = {
     </section>
     `
     return text
+  },
+  textArea: function () {
+    let text = 
+    `
+    <textarea></textarea>
+    `
+
+    return text
   }
 }
 
@@ -49,13 +61,13 @@ const select = {
   image: document.querySelector('.image'),
   notes: document.querySelector('.notes'),
   dot: document.querySelector('.dot'),
-  dots: document.querySelectorAll('.dot'),
   noteBox: document.querySelector('.noteBox'),
 
   removeAllClass: function (classElement) {
-    if (select.dots.length > 0) {
-      console.log(select.dots)
-      select.dots.forEach(function (dot) {
+    let dots = document.querySelectorAll('.dot')
+    if (dots.length > 0) {
+      console.log(dots)
+      dots.forEach(function (dot) {
         dot.classList.remove(classElement)
       })
     }
