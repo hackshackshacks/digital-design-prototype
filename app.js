@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   res.render('index.html', {})
 })
 
+app.get('/annotation', (req, res) => {
+  res.render('annotation.html', {})
+})
+
 app.listen(8001, () => {
   console.log('Listening.. port 8001')
 })
